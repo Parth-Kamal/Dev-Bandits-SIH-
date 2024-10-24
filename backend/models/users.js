@@ -16,14 +16,14 @@ const usersSchema = new Schema(
          type: String,
          required: [true, "User should have a department"],
       },
-      bio:{
+      bio: {
          type: String,
-         default:"",
+         default: "",
       },
       role: { type: String, enum: ["admin", "official"], default: "official" },
       profilePic: { type: String, default: null },
    },
-   { timestamps: true }
+   { timestamps: true },
 );
 
 usersSchema.index({ email: 1 });
